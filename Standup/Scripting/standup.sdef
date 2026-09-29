@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="Standup">
+    <suite name="Standup Suite" code="StUp" description="Control your standing desk from scripts.">
+
+        <command name="move desk" code="StUpMove" description="Send the desk to a preset height, or move it a little up or down.">
+            <cocoa class="StandupMoveDeskCommand"/>
+            <direct-parameter type="text" description="One of: sit, stand, up, down."/>
+            <result type="text" description="The command that was carried out."/>
+        </command>
+
+        <command name="set desk height" code="StUpHght" description="Send the desk to a specific height.">
+            <cocoa class="StandupSetHeightCommand"/>
+            <direct-parameter type="text" description="A height such as &quot;120cm&quot;, &quot;48in&quot; or just &quot;80&quot; (uses the unit chosen in Preferences)."/>
+            <result type="text" description="The height that was requested, in centimetres."/>
+        </command>
+
+    </suite>
+</dictionary>
