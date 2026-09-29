@@ -99,6 +99,18 @@ final class PopoverViewController: NSViewController {
         ])
     }
     
+    /// The app icon shown next to the title
+    private func appIconView(size: CGFloat) -> NSImageView {
+        let view = NSImageView(image: NSImage(named: "HeaderIcon") ?? NSApp.applicationIconImage)
+        view.imageScaling = .scaleProportionallyUpOrDown
+        view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            view.widthAnchor.constraint(equalToConstant: size),
+            view.heightAnchor.constraint(equalToConstant: size)
+        ])
+        return view
+    }
+
     private func iconTile(_ names: [String], size: CGFloat, symbolSize: CGFloat, radius: CGFloat) -> SurfaceView {
         let tile = SurfaceView()
         tile.cornerRadius = radius
@@ -154,7 +166,7 @@ final class PopoverViewController: NSViewController {
             more.heightAnchor.constraint(equalToConstant: 32)
         ])
         
-        let deskTile = iconTile(["table.furniture", "desktopcomputer"], size: 44, symbolSize: 22, radius: 12)
+        let deskTile = appIconView(size: 44)
         let header = stack([deskTile, titles, more], .horizontal, spacing: 12, alignment: .centerY)
         header.heightAnchor.constraint(equalToConstant: 44).isActive = true
         
