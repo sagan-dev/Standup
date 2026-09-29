@@ -14,5 +14,5 @@ Initial public release.
 - Preferences for the standing and sitting heights, units (cm / in), a height calibration and launch at login.
 - Automatic reconnection after sleep or a dropped Bluetooth connection.
 - AppleScript commands (`move desk`, `set desk height`).
-- Placeholder app and menu bar icons; see the README for where to add your own logo.
+- App icon (logo by Michal Sagan) and a template menu bar icon.
 - A small "Made by sagan.dev" credit in the popover, the Preferences window and the About panel.

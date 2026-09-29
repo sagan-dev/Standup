@@ -1,3 +1,5 @@
+<p align="center"><img src="images/icon.png" width="128" alt="Standup icon"></p>
+
 # Standup — Desk Remote Control
 
 A native macOS menu bar app for your Bluetooth sit/stand desk (IKEA IDÅSEN with the Linak controller). It shows the current height and moves the desk with one click.
@@ -39,7 +41,7 @@ To open Preferences, choose **…** → *Preferences…* in the popover, or righ
 
 ## Logo
 
-The app and menu bar icons are neutral placeholders. To use your own logo, replace the PNG files in `Standup/Assets.xcassets/AppIcon.appiconset` (16, 32, 64, 128, 256, 512 and 1024 px, same file names) and, if you want a custom glyph in the menu bar, set `button.image` in `Standup/StatusItemController.swift` (`configureButton()`) to a template image from the asset catalog.
+The app icon is in `Standup/Assets.xcassets/AppIcon.appiconset` (16, 32, 64, 128, 256, 512 and 1024 px); the 1024 px source is `design/AppIcon-source-1024.png`. The menu bar icon is a template symbol set in `Standup/StatusItemController.swift` (`configureButton()`).
 
 ## Troubleshooting
 
